@@ -6,6 +6,6 @@ The extension is plug-and-play, and you'll start hearing sounds after you've ins
 
 ## Feedback
 
-Feedback may be provided through our Discord community: https://chat.naomi.lgbt
+Feedback may be provided through our Discord community: https://chat.freecodecamp.org
 
 Enjoy! 💜

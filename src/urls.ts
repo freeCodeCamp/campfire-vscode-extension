@@ -1,6 +1,6 @@
 /**
- * @copyright nhcarrigan
- * @license Naomi's Public License
+ * @copyright freeCodeCamp
+ * @license BSD-3
  * @author Naomi Carrigan
  */
 

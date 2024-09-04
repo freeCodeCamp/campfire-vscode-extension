@@ -1,7 +1,7 @@
 {
   "name": "campfire-mode",
   "displayName": "Campfire Mode",
-  "publisher": "nhcarrigan",
+  "publisher": "freecodecamp",
   "description": "freeCodeCamp's soothing campfire melody, now in your local editor.",
   "version": "1.0.1",
   "engines": {
@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://codeberg.org/nhcarrigan/campfire-vscode"
+    "url": "https://github.com/freeCodeCamp/campfire-vscode-extension"
   },
   "contributes": {
     "commands": [
@@ -28,7 +28,7 @@
   },
   "scripts": {
     "vscode:prepublish": "pnpm run build",
-    "build": "tsc",
+    "build": "tsc && cp -r src/audio out/audio",
     "lint": "eslint src --max-warnings 0",
     "test": "vscode-test"
   },

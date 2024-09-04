@@ -1,3 +1,1 @@
-# Security Policy
-
-Our security policy can be found here: https://docs.nhcarrigan.com/#/security
+[Our security policy is available here.](https://contribute.freecodecamp.org/#/security)
