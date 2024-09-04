@@ -3,7 +3,7 @@
   "displayName": "Campfire Mode",
   "publisher": "nhcarrigan",
   "description": "freeCodeCamp's soothing campfire melody, now in your local editor.",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.92.0"
   },
