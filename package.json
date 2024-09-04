@@ -1,41 +1,50 @@
 {
   "name": "campfire-mode",
-  "displayName": "campfire-mode",
+  "displayName": "Campfire Mode",
+  "publisher": "nhcarrigan",
   "description": "freeCodeCamp's soothing campfire melody, now in your local editor.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.92.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
   "main": "./out/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://codeberg.org/nhcarrigan/campfire-vscode"
+  },
   "contributes": {
     "commands": [
       {
-        "command": "campfire-mode.helloWorld",
-        "title": "Hello World"
+        "command": "campfire-mode.playSoundOnKeydown",
+        "title": "Play Sound on Keydown"
       }
     ]
   },
   "scripts": {
-    "vscode:prepublish": "pnpm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "pnpm run compile && pnpm run lint",
-    "lint": "eslint src --ext ts",
+    "vscode:prepublish": "pnpm run build",
+    "build": "tsc",
+    "lint": "eslint src --max-warnings 0",
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.92.0",
-    "@types/mocha": "^10.0.7",
-    "@types/node": "20.x",
-    "@typescript-eslint/eslint-plugin": "^7.14.1",
-    "@typescript-eslint/parser": "^7.11.0",
-    "eslint": "^8.57.0",
-    "typescript": "^5.4.5",
-    "@vscode/test-cli": "^0.0.9",
-    "@vscode/test-electron": "^2.4.0"
+    "@nhcarrigan/eslint-config": "4.0.0",
+    "@nhcarrigan/typescript-config": "4.0.0",
+    "@types/mocha": "10.0.7",
+    "@types/node": "20.14.8",
+    "@types/play-sound": "1.1.2",
+    "@types/vscode": "1.92.0",
+    "@vscode/test-cli": "0.0.9",
+    "@vscode/test-electron": "2.4.0",
+    "eslint": "9.8.0",
+    "typescript": "5.4.5"
+  },
+  "dependencies": {
+    "play-sound": "1.1.6"
   }
 }
