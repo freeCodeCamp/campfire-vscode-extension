@@ -11,5 +11,9 @@ suite('Extension Test Suite', () => {
 	test('Sample test', () => {
 		assert.strictEqual(-1, [1, 2, 3].indexOf(5));
 		assert.strictEqual(-1, [1, 2, 3].indexOf(0));
-	});
+  });
+
+  test("should be able to load VS Code", async () => {
+     await vscode.commands.executeCommand("type");
+  });
 });
