@@ -19,9 +19,13 @@ export const playSound = (
   context: vscode.ExtensionContext,
 ): void => {
   const audio = player();
+
   const selected
     = urls[Math.floor(Math.random() * urls.length)] ?? "Guitar-Sample-01.mp3";
 
+  if (process.platform === "win32") {
+    audio.player = "powershell";
+  }
   const relativePath = join("out", "audio", selected);
 
   const audioPath = context.asAbsolutePath(relativePath);
