@@ -1,4 +1,3 @@
-
 /**
  * @copyright freeCodeCamp
  * @license BSD-3
@@ -27,7 +26,6 @@ export const playSound = (
     audio.player = "powershell";
   }
   const relativePath = join("out", "audio", selected);
-
   const audioPath = context.asAbsolutePath(relativePath);
 
   audio.play(audioPath, (error) => {
