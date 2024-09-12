@@ -27,8 +27,10 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "pnpm run build",
+    "vscode:prepublish": "npm run build",
+    "prebuild": "rm -rf ./out",
     "build": "tsc && cp -r src/audio out/audio",
+    "watch": "tsc -watch -p ./",
     "lint": "eslint src --max-warnings 0",
     "test": "vscode-test"
   },
@@ -42,7 +44,7 @@
     "@vscode/test-cli": "0.0.9",
     "@vscode/test-electron": "2.4.0",
     "eslint": "9.8.0",
-    "typescript": "5.4.5"
+    "typescript": "5.5.4"
   },
   "dependencies": {
     "play-sound": "1.1.6"

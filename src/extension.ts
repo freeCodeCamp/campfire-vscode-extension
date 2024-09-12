@@ -26,7 +26,7 @@ function activate(context: vscode.ExtensionContext): void {
           "default:type",
           rest,
         );
-        playSound(outputChannel);
+        playSound(outputChannel, context);
         return originalCommand;
       }
       return null;
